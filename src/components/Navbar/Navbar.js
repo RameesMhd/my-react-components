@@ -9,8 +9,8 @@ const MyNavbar = () => {
     return (
         <>
             {['sm'].map((expand) => (
-                <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
-                    <Container>
+                <Navbar key={expand} expand={expand} className="bg-body-tertiary sticky-top">
+                    <Container className='navbar-container'>
                         <Navbar.Brand href="#">
                             <img src='' />
                             Brand Logo
