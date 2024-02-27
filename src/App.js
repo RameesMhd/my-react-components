@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MyNavbar from './components/Navbar/Navbar.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to my React Components</h1>
+      <MyNavbar />
+      <h1>Welcome</h1>
     </div>
   );
 }
