@@ -1,0 +1,10 @@
+.card {
+    display: flex;
+    align-items: center;
+
+    .card-image {
+        width: 12rem;
+        height: 12rem;
+        object-fit: cover;
+    }
+}
