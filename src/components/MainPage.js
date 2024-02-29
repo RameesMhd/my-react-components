@@ -4,12 +4,15 @@ import Container from "react-bootstrap/esm/Container";
 import MyCards from "./Cards/MyCards";
 import "./MainPage.scss";
 import MyTabs from "./MyTabs";
+import AboutUs from "./AboutUs";
 
 const MainPage = () => {
     return (
         <>
             <MyNavbar />
             <CarouselFade />
+            <AboutUs />
+
             <h2 className="our-identity">Our Identity</h2>
             <Container className="cards-container">
                 <MyCards
