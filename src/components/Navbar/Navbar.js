@@ -12,8 +12,8 @@ const MyNavbar = () => {
                 <Navbar key={expand} expand={expand} className="bg-body-tertiary sticky-top">
                     <Container className='navbar-container'>
                         <Navbar.Brand href="#">
-                            <img src='' />
-                            Brand Logo
+                            <img className='brand-logo' src='https://sadectip.sirv.com/React%20Project%20Files/logo-black.png'  alt='loading...'/>
+                            {/* Brand Logo */}
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                         <Navbar.Offcanvas
