@@ -3,6 +3,7 @@ import CarouselFade from "./Carousel/MyCarousel";
 import Container from "react-bootstrap/esm/Container";
 import MyCards from "./Cards/MyCards";
 import "./MainPage.scss";
+import MyTabs from "./MyTabs";
 
 const MainPage = () => {
     return (
@@ -26,6 +27,10 @@ const MainPage = () => {
                     src={"https://sadectip.sirv.com/React%20Project%20Files/Values.png"}
                     description={"We embrace curiosity and creativity, constantly seeking new ideas, technologies, and approaches to solve complex challenges and drive progress"}
                 />
+            </Container>
+            <Container>
+                <h2 className="our-identity">Why we...</h2>
+                <MyTabs />
             </Container>
         </>
     )
