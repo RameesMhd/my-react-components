@@ -41,7 +41,7 @@ const MyNavbar = () => {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link as={ScrollLink} to="home" smooth={true} duration={300}>Home</Nav.Link>
+                                    <Nav.Link as={ScrollLink} to="home" smooth={true} duration={300} offset= {-navbarHeight}>Home</Nav.Link>
                                     <Nav.Link as={ScrollLink} to="about" smooth={true} duration={300} offset= {-navbarHeight}>About Us</Nav.Link>
                                     <NavDropdown
                                         title="Programs"

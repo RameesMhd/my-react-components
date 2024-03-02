@@ -3,19 +3,24 @@
     font-size: 32px;
 }
 
-.cards-container {
-    .row {
-        .card-col {
-            padding-bottom: 16px;
+.right-col {
+    background-color: #be1e11;
+
+    .card {
+        .card-title {
+            color: #fff79a;
         }
 
-        // display: flex;
-        // padding: 32px 0px 64px 0px;
-        // gap: 8px;
-        // font-size: 14px;
-        // align-content: stretch;
-        // flex-wrap: wrap;
-        // align-items: stretch;
-        // justify-content: space-evenly;
+        .card-text {
+            color: #fff;
+            border-left: 2px solid #fff79a;
+        }
     }
+}
+.card-title {
+    font-size: 24px;
+}
+
+.row {
+    --bs-gutter-x: 0rem;
 }

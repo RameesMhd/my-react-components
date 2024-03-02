@@ -1,9 +1,9 @@
+import React from 'react';
 import MyNavbar from "../components/Navbar/Navbar";
 import CarouselFade from "./Carousel/MyCarousel";
 import Container from "react-bootstrap/esm/Container";
 import MyCards from "./Cards/MyCards";
 import "./MainPage.scss";
-import MyTabs from "./MyTabs";
 import AboutUs from "./AboutUs";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -50,32 +50,48 @@ const MainPage = () => {
             src: "https://sadectip.sirv.com/React%20Project%20Files/Mission.png",
             description: "We work together for the betterment of our institution, the university we affiliated, the communities we serve and the world."
         }
-    ]
+    ];
+
+    // Splitting the aboutData into two arrays for left and right columns
+    const leftColumnData = aboutData.slice(0, 4);
+    const rightColumnData = aboutData.slice(4);
+
     return (
         <>
             <MyNavbar />
-            <CarouselFade />
+            <section id="home">
+                <CarouselFade />
+            </section>
             <AboutUs />
 
-            <h2 className="our-identity">Our Identity</h2>
-            <Container className="cards-container">  
-                <Row className="justify-content-center">
-                    {aboutData.map((card, index) => (
-                        <Col className="card-col" lg={3} md={3} sm={6} key={index}>
-                            <MyCards
-                                title={card.title}
-                                src={card.src}
-                                description={card.description}
-                            />
-                        </Col>
+            <Row className="justify-content-center w-100">
+                <Col className='left-col' lg={6} md={6} sm={12}>
+                    {leftColumnData.map((card, index) => (
+                        <MyCards
+                            key={index}
+                            title={card.title}
+                            src={card.src}
+                            description={card.description}
+                        />
                     ))}
-                </Row>
-            </Container>
+                </Col>
+                <Col className='right-col' lg={6} md={6} sm={12}>
+                    {rightColumnData.map((card, index) => (
+                        <MyCards
+                            key={index}
+                            title={card.title}
+                            src={card.src}
+                            description={card.description}
+                        />
+                    ))}
+                </Col>
+            </Row >
             <Container>
                 <h2 className="our-identity">Why we...</h2>
-                <MyTabs />
+                {/* Include your MyTabs component here */}
             </Container>
         </>
     )
-}
-export default MainPage
+};
+
+export default MainPage;

@@ -6,8 +6,8 @@ const MyCards = ({src,title,description}) => {
     <Card>
       {/* <Card.Img variant="top" className='card-image' src={src} /> */}
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Title className='card-title'>{title}</Card.Title>
+        <Card.Text className='card-text'>{description}</Card.Text>
       </Card.Body>
     </Card>
   );

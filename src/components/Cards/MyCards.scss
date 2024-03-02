@@ -1,8 +1,9 @@
 .card {
+    background-color: transparent;
     display: flex;
-    align-items: center;
-    height: 100%;
-    border: 2px solid #be1e11;
+    align-items: flex-start;
+    border: none;
+    text-align: left;
 
     // .card-image {
     //     width: 12rem;
@@ -12,8 +13,11 @@
     .card-title {
         text-decoration: underline;
         text-decoration-color: #be1e11;
+        padding: 0 0 0 12px;
     }
-    // .card-text{
-    //     text-align: justify;
-    // }
+
+    .card-text {
+        border-left: 2px solid #be1e11;
+        padding: 0 0 0 12px;
+    }
 }

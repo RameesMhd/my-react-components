@@ -10,7 +10,7 @@ const AboutUs = () => {
                 {/* <Container> */}
 
                 <Row>
-                    <Col className="about-us-content" xs={12} sm={6} md={7} >
+                    <Col className="about-us-content" xs={12} sm={6} md={6} >
                         <h3>About Us</h3>
 
                         <p>
@@ -39,7 +39,7 @@ const AboutUs = () => {
                     {/* <div className="about-us-devider">
                         <img src="https://sadectip.sirv.com/React%20Project%20Files/logo-black.png"></img>
                     </div> */}
-                    <Col xs={12} sm={6} md={5} className="about-us-image-wrapper">
+                    <Col xs={12} sm={6} md={6} className="about-us-image-wrapper">
                         <img className="about-us-image" src="https://sadectip.sirv.com/React%20Project%20Files/webeducation.png" />
                     </Col>
                 </Row>
