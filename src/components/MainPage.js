@@ -7,6 +7,7 @@ import "./MainPage.scss";
 import AboutUs from "./AboutUs";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import MyTabs from "./MyTabs";
 
 const MainPage = () => {
     const aboutData = [
@@ -89,6 +90,7 @@ const MainPage = () => {
             <Container>
                 <h2 className="our-identity">Why we...</h2>
                 {/* Include your MyTabs component here */}
+                <MyTabs />
             </Container>
         </>
     )
