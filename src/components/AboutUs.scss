@@ -1,11 +1,41 @@
-.about-us{
-    background: #f2f2f2;
-    padding: 32px 0px 64px 0px;
-    font-size: 14px;
-    width: 100%;
-    .about-us-image{
+.about-us {
+    .row {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        position: relative;
+
+        .about-us-content {
+            background: #be1e11;
+            color: #fff;
+            padding: 64px 120px 64px 64px;
+            text-align: justify;
+        }
+        h3{
+            text-align: center;
+        }
+
+        .about-us-devider {
+            // position: absolute;
+            // top: 50%;
+
+            img {
+                height: 100px;
+            }
+
+        }
+
+        .about-us-image-wrapper {
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            .about-us-image {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
     }
+
 }

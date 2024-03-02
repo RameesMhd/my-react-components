@@ -1,19 +1,32 @@
+import React, { useRef, useState, useEffect } from 'react';
 import './Navbar.scss';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link as ScrollLink } from 'react-scroll';
 
 const MyNavbar = () => {
+    const navbarRef = useRef(null);
+    const [navbarHeight, setNavbarHeight] = useState(0);
+
+    useEffect(() => {
+        if (navbarRef.current) {
+            const height = navbarRef.current.clientHeight;
+            setNavbarHeight(height);
+        }
+    }, []);
+    console.log("navbarHeight",navbarHeight);
+
     return (
         <>
             {['sm'].map((expand) => (
-                <Navbar key={expand} expand={expand} className="bg-body-tertiary sticky-top">
+                <Navbar key={expand} expand={expand} className="bg-body-tertiary sticky-top" ref={navbarRef}>
                     <Container className='navbar-container'>
                         <Navbar.Brand href="#">
-                            <img className='brand-logo' src='https://sadectip.sirv.com/React%20Project%20Files/logo-black.png'  alt='loading...'/>
-                            {/* Brand Logo */}
+                            {/* <img className='brand-logo' src='https://sadectip.sirv.com/React%20Project%20Files/logo-black.png'  alt='loading...'/> */}
+                            Brand Logo
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                         <Navbar.Offcanvas
@@ -28,8 +41,8 @@ const MyNavbar = () => {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link href="#home">Home</Nav.Link>
-                                    <Nav.Link href="#about">About Us</Nav.Link>
+                                    <Nav.Link as={ScrollLink} to="home" smooth={true} duration={300}>Home</Nav.Link>
+                                    <Nav.Link as={ScrollLink} to="about" smooth={true} duration={300} offset= {-navbarHeight}>About Us</Nav.Link>
                                     <NavDropdown
                                         title="Programs"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -44,7 +57,7 @@ const MyNavbar = () => {
                                             Program 3
                                         </NavDropdown.Item>
                                     </NavDropdown>
-                                    <Nav.Link href="#about">Contact Us</Nav.Link>
+                                    <Nav.Link href="#contact">Contact Us</Nav.Link>
                                     <Nav.Link href="#gallery">Gallery</Nav.Link>
                                 </Nav>
                             </Offcanvas.Body>
