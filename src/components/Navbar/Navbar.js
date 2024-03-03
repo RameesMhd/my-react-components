@@ -5,24 +5,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const MyNavbar = () => {
-    const navbarRef = useRef(null);
-    const [navbarHeight, setNavbarHeight] = useState(0);
-
-    useEffect(() => {
-        if (navbarRef.current) {
-            const height = navbarRef.current.clientHeight;
-            setNavbarHeight(height);
-        }
-    }, []);
-    console.log("navbarHeight",navbarHeight);
-
     return (
         <>
             {['sm'].map((expand) => (
-                <Navbar key={expand} expand={expand} className="bg-body-tertiary sticky-top" ref={navbarRef}>
+                <Navbar key={expand} expand={expand} className="bg-body-tertiary sticky-top">
                     <Container className='navbar-container'>
                         <Navbar.Brand href="#">
                             {/* <img className='brand-logo' src='https://sadectip.sirv.com/React%20Project%20Files/logo-black.png'  alt='loading...'/> */}
@@ -41,13 +30,13 @@ const MyNavbar = () => {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link as={ScrollLink} to="home" smooth={true} duration={300} offset= {-navbarHeight}>Home</Nav.Link>
-                                    <Nav.Link as={ScrollLink} to="about" smooth={true} duration={300} offset= {-navbarHeight}>About Us</Nav.Link>
+                                    <Nav.Link>Home</Nav.Link>
+                                    <Nav.Link>About Us</Nav.Link>
                                     <NavDropdown
                                         title="Programs"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
-                                        <NavDropdown.Item href="#program1">
+                                        <NavDropdown.Item>
                                             Program 1
                                         </NavDropdown.Item>
                                         <NavDropdown.Item href="#program2">
