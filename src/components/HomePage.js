@@ -1,5 +1,4 @@
 import React from 'react';
-import MyNavbar from "../components/Navbar/Navbar";
 import CarouselFade from "./Carousel/MyCarousel";
 import Container from "react-bootstrap/esm/Container";
 import MyCards from "./Cards/MyCards";
@@ -59,7 +58,6 @@ const MainPage = () => {
 
     return (
         <>
-            <MyNavbar />
             <section id="home">
                 <CarouselFade />
             </section>
